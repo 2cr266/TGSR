@@ -1026,9 +1026,3 @@ def save_tde_visualization_inputs(lr, tde_vis, out_dir, prefix='tde', sample_idx
         'width': w,
     }
 
-
-def count_parameters(model):
-    """Return total, trainable, and frozen parameter counts."""
-    total = sum(parameter.numel() for parameter in model.parameters())
-    trainable = sum(parameter.numel() for parameter in model.parameters() if parameter.requires_grad)
-    return total, trainable, total - trainable
