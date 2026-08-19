@@ -9,7 +9,6 @@ Official PyTorch implementation of **TGSR**, a lightweight blind image super-res
 - [Data preparation](#data-preparation)
 - [ImageNet-Test-100](#imagenet-test-100)
 - [Inference](#inference)
-- [Model inspection](#model-inspection)
 - [Repository structure](#repository-structure)
 
 
@@ -98,29 +97,6 @@ python inference.py \
 
 Use `--device cpu` when CUDA is unavailable. The checkpoint loader accepts a plain state dictionary or dictionaries stored under `state_dict` or `model`.
 
-## Model inspection
-
-The following smoke test verifies the main TDE to DAR forward path and checks the SR output, token assignments, and restoration-state shapes:
-
-```bash
-python -m test.smoke_test
-```
-
-To access intermediate outputs in Python:
-
-```python
-import torch
-from model import TGSR
-
-model = TGSR(upscale=4).eval()
-lr = torch.rand(1, 3, 32, 32)
-
-with torch.inference_mode():
-    sr, auxiliary = model(lr, return_vis=True)
-
-assignments = auxiliary["tde"]["assignments"]
-states = auxiliary["tde"]["states"]
-```
 
 ## Repository structure
 
