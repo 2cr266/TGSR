@@ -1,4 +1,4 @@
-from model.catanet_arch import CATANet
+
 from option.option_vqdam_test import args
 
 from testmodel.cdcl.blindsr import BlindSR
@@ -26,16 +26,16 @@ def main():
     torch.manual_seed(args.seed)
 
     model_paths = [
-        '/home/wlxy/VQ-DAM-main/testPT/catanet/x4.pth',
+        '',
     ]
     model_names = [
-        'ccata'
+        ''
     ]
 
-    models = [CATANet(upscale=4).cuda() for _ in range(len(model_paths))]
-    # model_path = '/home/wlxy/VQ-DAM-main/experiment/catadcls-5.75isox4/setting1_x4.pt'
-    # model = CATANet(args)
-    # model.load_state_dict(torch.load("/home/wlxy/VQ-DAM-main/experiment/catadcls-5.75isox4/x4.pth"))
+    models = [TGSR(upscale=4).cuda() for _ in range(len(model_paths))]
+    # model_path = ''
+    # model = TGSR(args)
+    # model.load_state_dict(torch.load(""))
     # model.load_state_dict(torch.load(model_paths), strict=False)
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     # model = model.to(device)
