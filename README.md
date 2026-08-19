@@ -118,7 +118,3 @@ TGSR/
 ```
 
 
-
-## Acknowledgements
-
-This repository builds on ideas and utilities from the open-source blind super-resolution community, including CATANet, DCLS, and ResShift. We thank the authors for making their work publicly available.
