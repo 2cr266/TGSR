@@ -11,9 +11,7 @@ Official PyTorch implementation of **TGSR**, a lightweight blind image super-res
 - [Inference](#inference)
 - [Model inspection](#model-inspection)
 - [Repository structure](#repository-structure)
-- [Release status](#release-status)
-- [Citation](#citation)
-- [Acknowledgements](#acknowledgements)
+
 
 ## Method
 
@@ -143,28 +141,7 @@ TGSR/
 └── requirements.txt
 ```
 
-## Release status
 
-- [x] TGSR architecture and intermediate-assignment export
-- [x] Reproducible ImageNet-Test-100 selection and exact filename list
-- [x] Single-image inference entry point
-- [ ] Final pretrained checkpoints
-- [ ] Full training and benchmark evaluation configurations
-
-The remaining artifacts will be added after final verification.
-
-## Citation
-
-If this work is useful for your research, please cite:
-
-```bibtex
-@misc{chen2026tgsr,
-  title  = {TGSR: Degradation-Aware Token Grouping for Lightweight Blind Image Super-Resolution},
-  author = {Jimin Chen and Rui Cao and Xianhong Wen and Sheng Ren},
-  year   = {2026},
-  note   = {Manuscript}
-}
-```
 
 ## Acknowledgements
 
